@@ -6,9 +6,10 @@
 class Rectangle : public Shape
 {
 	public:
+		Rectangle(float, float);
 		float getArea();
 		float getPerimeter();
 	private:
-		int length;
-		int width;
+		float length;
+		float width;
 };
