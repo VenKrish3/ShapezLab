@@ -6,9 +6,10 @@
 class RightTriangle : public Shape
 {
 	public:
+		RightTriangle(float, float);
 		float getArea();
 		float getPerimeter();
 	private:
-		int length;
-		int width;
+		float height;
+		float base;
 };
