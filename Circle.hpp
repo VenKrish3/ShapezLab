@@ -7,8 +7,8 @@
 class Circle : public Shape
 {
 	public:
-		void getArea();
-		void getPerimeter();
+		float getArea();
+		float getPerimeter();
 	private:
 		int radius;	
 		float pi = 3.14;

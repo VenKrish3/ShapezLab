@@ -4,12 +4,12 @@
 
 using namespace std;
 
-void getArea()
+float getArea()
 {
 	
 };
 	
-void getPerimeter()
+float getPerimeter()
 {
 	
 };

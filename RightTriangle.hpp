@@ -6,8 +6,8 @@
 class RightTriangle : public Shape
 {
 	public:
-		void getArea();
-		void getPerimeter();
+		float getArea();
+		float getPerimeter();
 	private:
 		int length;
 		int width;
