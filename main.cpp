@@ -13,9 +13,9 @@ int main()
 	Rectangle rect = new rectangle();
 	RightTriangle trang = new RightTriangle();
 	assert(circle.getArea(3) == 28.27);
-	assert(rect.getArea(3,3) == );
-	assert(trang.getArea(3,3) == );
-	assert(circle.getPerimeter(3,3) == );
-	assert(rect.getPerimeter(3,3) == );
-	assert(trang.getPerimeter(3,3) == );
+	assert(rect.getArea(3,3) == 9);
+	assert(trang.getArea(3,3) == 4.5);
+	assert(circle.getPerimeter(3) == 18.84);
+	assert(rect.getPerimeter(3,3) == 12);
+	assert(trang.getPerimeter(3,3) == 4.24);
 }
