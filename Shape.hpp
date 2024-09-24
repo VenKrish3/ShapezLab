@@ -6,6 +6,6 @@
 class Shape
 {
 	public:
-		virtual	void getArea() = 0;
-		virtual	void getPerimeter() = 0;
+		virtual	float getArea() = 0;
+		virtual	float getPerimeter() = 0;
 };
