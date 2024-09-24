@@ -1,0 +1,97 @@
+#include <iostream>
+#include <cassert>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+class Shape
+{
+	public:
+		virtual	float getArea() = 0;
+		virtual	float getPerimeter() = 0;
+};
+
+// Wrong Triangle
+class RightTriangle : public Shape {
+	public:
+		RightTriangle(float, float);
+		float getArea();
+		float getPerimeter();
+	private:
+		float height;
+		float base;
+};
+RightTriangle::RightTriangle(float base, float height) {
+	this->base = base;
+	this->height = height;
+}
+float RightTriangle::getArea() {
+	return (base * height) / 2;
+};
+float RightTriangle::getPerimeter() {
+    cout << (base + height) + sqrt((base * base) + (height * height));
+	return (base + height) + sqrt((base * base) + (height * height));
+};
+
+// Rectangale
+class Rectangle : public Shape {
+	public:
+		Rectangle(float, float);
+		float getArea();
+		float getPerimeter();
+	private:
+		float length;
+		float width;
+};
+Rectangle::Rectangle(float length, float width) {
+	this->length = length;
+	this->width = width;
+}
+float Rectangle::getArea() {
+	return width * length;
+};
+float Rectangle::getPerimeter() {
+	return (width * 2) + (length * 2);
+};
+
+// Circle
+class Circle : public Shape {
+	public:
+		Circle(float);
+		float getArea();
+		float getPerimeter();
+	private:
+		int radius;	
+		float pi = 3.14;
+};
+Circle::Circle(float radius) {
+	this->radius = radius;
+}
+float Circle::getArea() {
+	return pow((pi*radius),2);
+};
+float Circle::getPerimeter() {
+	return 2*pi*radius;
+};
+
+// main
+int main() {
+    cout << fixed << setprecision(2);
+    int x = 3, y = 3;
+	Circle circle(x);
+	Rectangle rect(x, y);
+	RightTriangle trang(x, y);
+	
+	cout << round(15.5) << "\n";
+	
+	circle.getArea();
+	rect.getArea();
+	trang.getPerimeter();
+	assert(circle.getArea() == 88.73);
+	assert(rect.getArea() == 9);
+	assert(trang.getArea() == 4.5);
+	//assert(circle.getPerimeter() == 18.84);
+	assert(rect.getPerimeter() == 12);
+	//assert(trang.getPerimeter() == 10.24);
+}
