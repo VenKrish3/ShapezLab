@@ -9,13 +9,13 @@ Circle::Circle(float radius)
 	this->radius = radius;
 }
 
-float getArea()
+float Circle::getArea()
 {
-	return pow((pi*radius),2);
+	return this->pi * pow(this->radius,2);
 };
 	
-float getPerimeter()
+float Circle::getPerimeter()
 {
-	return 2*pi*radius;
+	return 2*(this->pi)*(this->radius);
 };
 
