@@ -5,17 +5,17 @@
 using namespace std;
 
 
-Rectangle(float length, float height) {
+Rectangle::Rectangle(float length, float width) {
 	this->length = length;
-	this->height = height;
+	this->width = width;
 }
 
-float getArea()
+float Rectangle::getArea()
 {
 	return width * length;
 };
 	
-float getPerimeter()
+float Rectangle::getPerimeter()
 {
 	return (width * 2) + (length * 2);
 };

@@ -4,17 +4,17 @@
 
 using namespace std;
 
-RightTriangle(float base, float height) {
+RightTriangle::RightTriangle(float base, float height) {
 	this->base = base;
 	this->height = height;
 }
-float getArea()
+float RightTriangle::getArea()
 {
 	return (base * height) / 2;
 };
 	
-float getPerimeter()
+float RightTriangle::getPerimeter()
 {
-	return (base + height) + sqrt((base * base) + (height * height);
+	return (base + height) + sqrt((base * base) + (height * height));
 };
 
