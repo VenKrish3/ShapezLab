@@ -8,4 +8,5 @@ class Shape
 	public:
 		virtual	float getArea() = 0;
 		virtual	float getPerimeter() = 0;
+		void printAreaToScreen(Shape *s);
 };
